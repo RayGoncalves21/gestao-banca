@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css"
+        integrity="sha512-P9vJUXK+LyvAzj8otTOKzdfF1F3UYVl13+F8Fof8/2QNb8Twd6Vb+VD52I7+87tex9UXxnzPgWA3rH96RExA7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/brands.min.css"
+        integrity="sha512-sVSECYdnRMezwuq5uAjKQJEcu2wybeAPjU4VJQ9pCRcCY4pIpIw4YMHIOQ0CypfwHRvdSPbH++dA3O4Hihm/LQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css"
+        integrity="sha512-tk4nGrLxft4l30r9ETuejLU0a3d7LwMzj0eXjzc16JQj+5U1IeVoCuGLObRDc3+eQMUcEQY1RIDPGvuA7SNQ2w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
+
+
+    <title>bwins</title>
+
+    <style>
+        :root {
+            --all_black: #000000;
+            --ouro-logo: #e09f1d;
+            --color-primary: #269fe6;
+            --color-primary-hover: #2086c2;
+            --color-primary-dark: #13141f;
+            --color-primary-dark-hover: #212336;
+            --color-primary-light: #d4ecfa;
+            --color-primary-light-hover: #bdd8e7;
+
+            --color-white: #fff;
+            --color-black: #000;
+
+            --color-dark-text: #444;
+            --color-info-light: #cce5ff;
+            --color-debug-light: #cce5ff;
+            --color-success-light: #d4edda;
+            --color-alert-light: #fff3cd;
+            --color-warning-light: #fff3cd;
+            --color-error-light: #f8d7da;
+
+            --color-info-dark: #4d86c4;
+            --color-debug-dark: #4d86c4;
+            --color-success-dark: #4a9c5d;
+            --color-alert-dark: #927f40;
+            --color-warning-dark: #927f40;
+            --color-error-dark: #da525d;
+
+            --color-gray-0: #f9f9f9;
+            --color-gray-1: #e0e0e0;
+            --color-gray-2: #c7c7c7;
+            --color-gray-3: #aeaeae;
+            --color-gray-4: #959595;
+            --color-gray-5: #7d7d7d;
+            --color-gray-6: #646464;
+            --color-gray-7: #4b4b4b;
+            --color-gray-8: #323232;
+            --color-gray-9: #191919;
+
+            --font-primary: sans-serif;
+            --font-headings: 'Roboto Slab', serif;
+
+            --spacing-gutter-medium: 3rem;
+            --spacing-gutter-large: 4rem;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+
+        }
+
+        html {
+            font-size: 62.5%;
+
+        }
+
+        body {
+            font-size: 1.6rem;
+            font-family: var(--font-primary);
+            background: #161618;
+            color: var(--color-warning-light);
+
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: var(--font-headings);
+        }
+
+        .rodape-container {
+
+
+            max-width: 440px;
+            max-height: 900px;
+            background: var(--all_black);
+            display: flex;
+            flex-flow: row nowrap;
+            font-size: 15px;
+
+            /* Deixa desponsivo*/
+
+            padding: 5px;
+        }
+
+
+
+        .rodape-cotainer-icones {
+            padding-right: 5px;
+            display: flex;
+            flex-flow: wrap;
+
+        }
+
+        .rodape-cotainer-link {
+            padding-right: 5px;
+            display: block;
+
+
+        }
+
+        .rodape-container h3 {
+            text-align: center;
+            display: flex;
+            flex-flow: wrap;
+        }
+
+
+        .rodape-container a {
+            text-decoration: none;
+            color: var(--color-warning-light);
+            text-align: center;
+            display: flex;
+            flex-flow: wrap;
+
+        }
+
+
+
+
+
+
+
+        /*   Começa conteudo  */
+
+
+
+
+        .container {
+            max-width: 144rem;
+            padding: var(--spacing-gutter-medium);
+
+            margin: 0 auto;
+
+
+        }
+
+        .main-header-container {
+            background-color: var(--all_black);
+
+
+        }
+
+        .main-logo {
+            font-size: 4rem;
+            color: var(--color-white);
+            text-decoration: none;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: center;
+            width: fit-content;
+            height: 70px;
+            margin: 0 auto;
+            padding-top: 0;
+
+        }
+
+        .main-logo-icon {
+            margin-right: 0rem;
+
+
+
+
+            /* ***********Botoes top ********** */
+
+        }
+
+        .botao-registrar-bilhete-top {
+            margin: 5px;
+
+            font-size: 15px;
+            text-align: center;
+
+
+
+        }
+
+        .botao-registrar-bilhete-top a {
+            padding: 10px;
+            font-size: 13px;
+            margin-left: 7px;
+            margin-right: 7px;
+            color: black;
+            background-color: greenyellow;
+            border: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 40px;
+            text-decoration: none;
+
+        }
+
+        .botao-registrar-bilhete-top-icone {
+            margin-right: 5px;
+        }
+
+        /* ************* Começa search ************ */
+
+        .search-form {
+            border: 2px solid var(--ouro-logo);
+            max-width: 64rem;
+            margin: 0 auto;
+            border-radius: 4px;
+            position: relative;
+            transition: all 300ms ease-in-out;
+
+        }
+
+        .search-input,
+        .search-button {
+            border: none;
+            background: none;
+            outline: none;
+            padding: 1rem;
+            transition: all 300ms ease-in-out;
+
+        }
+
+        .search-button {
+            color: var(--ouro-logo);
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .search-button:focus-within {
+            outline: 1px solid var(--color-primary);
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .search-input {
+            width: 100%;
+            padding-right: 3rem;
+        }
+
+        .search-form:focus-within {
+            border-color: var(--color-primary);
+            background: var(--color-white);
+        }
+
+        .search-form:focus-within .search-button {
+            color: var(--color-primary);
+        }
+
+        .img-logo {
+            width: 124px;
+            height: 117px;
+        }
+
+
+
+        /* 4 primeiras dashboards*/
+        .main-dashboards {
+            /*background: blue;*/
+            padding-top: 0;
+            padding-right: 0px;
+
+
+
+
+        }
+
+        /* dashboards-conteudo mecho no container todo e dashboards-conteudo-lista mecho nas listas*/
+        .main-dashboards-lista {
+            display: flex;
+            flex-flow: wrap;
+
+            /* Deixa desponsivo*/
+            gap: var(--spacing-gutter-large);
+            padding: 30px;
+
+        }
+
+
+        /* dashboard banca */
+        .banca {
+            max-width: 100%;
+            max-height: 100%;
+            background-image: url("https://img.freepik.com/fotos-gratis/desfoque-abstrato-estudio-vazio-de-gradiente-verde-bem-use-como-modelo-de-site-de-plano-de-fundo-para-relatorio-de-negocios_1258-54064.jpg?w=826&t=st=1665366025~exp=1665366625~hmac=8e65fe6d42106bc19104484746af3e9d52ca91a6499d9ffddf22f6eff6e5aae3");
+
+            transition: all 300ms ease-in-out;
+            transform: scale(1);
+
+        }
+
+        .banca i {
+            padding-right: 12px;
+
+        }
+
+        .banca-lista-itens {
+            width: 32rem;
+            height: 17rem;
+            box-shadow: -15px 15px 20px rgba(0, 0, 10, 0.2);
+        }
+
+        .banca-lista-itens:hover {
+            transform: scale(1.02);
+            box-shadow: -8px 8px 18px rgba(0, 0, 0, 0.25);
+        }
+
+        .banca-meta {
+            display: flex;
+            flex-flow: column nowrap;
+            flex-shrink: 1;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .banca-meta-titulo {
+            font-size: 3.5rem;
+            color: #269fe6;
+
+
+        }
+
+        .banca-meta-valor {
+            font-size: 4rem;
+            color: greenyellow;
+            margin-bottom: 20px;
+
+        }
+
+
+
+
+        /* ************* Começa os  dashboard de green e red *********************  */
+        .indicadores {
+            max-width: 100%;
+            max-height: 100%;
+            background-image: url("https://img.freepik.com/fotos-gratis/desfoque-abstrato-estudio-vazio-de-gradiente-verde-bem-use-como-modelo-de-site-de-plano-de-fundo-para-relatorio-de-negocios_1258-54064.jpg?w=826&t=st=1665366025~exp=1665366625~hmac=8e65fe6d42106bc19104484746af3e9d52ca91a6499d9ffddf22f6eff6e5aae3");
+
+            box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
+            transition: all 300ms ease-in-out;
+            transform: scale(1);
+
+        }
+
+        /* Muda de um por um e tmanho  */
+        .indicadores-lista-itens {
+            width: 32rem;
+            height: 17rem;
+            box-shadow: -15px 15px 20px rgba(0, 0, 10, 0.2);
+
+        }
+
+        .indicadores-lista-itens:hover {
+            transform: scale(1.02);
+            box-shadow: -8px 8px 18px rgba(0, 0, 0, 0.25);
+        }
+
+
+
+
+        .indicadores-meta {
+            display: flex;
+            flex-flow: column nowrap;
+            flex-shrink: 1;
+            flex-grow: 1;
+            text-align: center;
+
+        }
+
+        .indicadores-meta-green {
+            font-size: 2rem;
+            color: greenyellow;
+
+        }
+
+        .indicadores-meta-red {
+            font-size: 2rem;
+            color: red;
+        }
+
+        .indicadores-meta-green-numero {
+            font-size: 5.5rem;
+            color: greenyellow;
+        }
+
+        .indicadores-meta-red-numero {
+            font-size: 5.5rem;
+            color: red
+        }
+
+        .x {
+            margin-top: 50px;
+            margin-bottom: 0;
+            font-size: 25px;
+        }
+
+        .indicadores-meta-container {
+            display: flex;
+            flex-flow: row wrap;
+            padding: 1rem;
+            background: none;
+
+        }
+
+
+
+        .indicadores-meta-container-titulo {
+            color: #269fe6;
+            font-size: 27px;
+        }
+
+        .botoes-baixo1 {
+            padding-top: 2px;
+            padding-bottom: 11px;
+            margin-left: 35px;
+            font-size: 15px;
+        }
+
+        .botoes-baixo1 a {
+
+            margin-left: 68px;
+            font-size: 15px;
+            color: #fff;
+            background-color: none;
+            border: none;
+            height: 30px;
+            line-height: 15px;
+            padding: 0 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 40px;
+        }
+
+        .botoes-baixo2 {
+            padding-top: 0;
+            margin-left: 35px;
+            font-size: 15px;
+        }
+
+        .botoes-baixo2 a {
+            font-size: 15px;
+
+            margin-left: 58px;
+            color: #fff;
+            background-color: none;
+            border: none;
+            height: 30px;
+            line-height: 15px;
+            padding: 0 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 40px;
+
+
+
+        }
+
+        .range-meta {
+            size: 50rem;
+            padding-top: 0;
+            margin-top: 0;
+        }
+
+        .range-meta-porcentagem {
+            text-align: center;
+            font-size: 13px;
+        }
+
+        .botao-edita-meta a {
+            color: white;
+            font-size: 13px;
+        }
+
+
+        .range-meta {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+
+        /* *********Começa dashboard de meta diaria *********** */
+
+        .objetivos {
+            max-width: 100%;
+            max-height: 100%;
+            background-image: url("https://img.freepik.com/fotos-gratis/desfoque-abstrato-estudio-vazio-de-gradiente-verde-bem-use-como-modelo-de-site-de-plano-de-fundo-para-relatorio-de-negocios_1258-54064.jpg?w=826&t=st=1665366025~exp=1665366625~hmac=8e65fe6d42106bc19104484746af3e9d52ca91a6499d9ffddf22f6eff6e5aae3");
+            /*background: #25262c;*/
+            box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.2);
+            transition: all 300ms ease-in-out;
+            transform: scale(1);
+
+        }
+
+        /* Muda de um por um e tmanho  */
+        .objetivos-lista-itens {
+            width: 32rem;
+            height: 17rem;
+            box-shadow: -15px 15px 20px rgba(0, 0, 10, 0.2);
+
+        }
+
+        .objetivos-lista-itens:hover {
+            transform: scale(1.02);
+            box-shadow: -8px 8px 18px rgba(0, 0, 0, 0.25);
+        }
+
+        .objetivos-meta-titulo {
+            font-size: 3.5rem;
+            color: #269fe6;
+            text-align: center;
+            margin: 0;
+        }
+
+        .objetivos-meta-titulo-icone {
+            margin-right: 10px;
+        }
+
+        .objetivos-cover {
+
+            padding-left: 2px;
+            margin-left: 3px;
+        }
+
+
+
+
+        .objetivos-meta {
+
+            flex-shrink: 1;
+            flex-grow: 1;
+            text-align: center;
+
+
+        }
+
+        .objetivos-meta-container {
+            padding-left: 15px;
+        }
+
+
+        .objetivos-meta table {
+            display: contents;
+
+            font-size: 15px;
+            text-align: center;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            padding-right: 15px;
+
+        }
+
+        .objetivos-meta th,
+        td {
+            /*border: 2px solid #000;*/
+
+        }
+
+
+
+        .objetivos hr {
+            max-width: 10px;
+            text-align: center;
+        }
+
+
+
+
+        .objetivos-meta-tabelas-porcentagem {
+            background: greenyellow;
+            color: black;
+            padding: 3px;
+
+        }
+
+        .objetivos-meta-tabelas-porcentagemred {
+            background: red;
+            color: black;
+            text-align: center;
+            padding: 3px;
+
+
+        }
+
+
+        .objetivos-meta-tabela1-metawin {
+            padding-top: 0;
+            padding-bottom: 0;
+
+
+
+        }
+
+        .objetivos-meta-tabela2-metawin {
+            padding-top: 0;
+            padding-bottom: 0;
+
+        }
+
+
+        .objetivos-meta-tabela1-numero {
+
+
+            color: greenyellow;
+            font-size: 25px;
+            margin-bottom: 10px;
+
+
+        }
+
+        .objetivos-meta-tabela-loss-numero {
+            color: red;
+            font-size: 25px;
+        }
+
+
+        .x {
+            margin-top: 50px;
+            margin-bottom: 0;
+            font-size: 25px;
+        }
+
+        .objetivos-meta-container {
+            display: flex;
+            flex-flow: row wrap;
+            padding: 1rem;
+            background: none;
+            text-align: center;
+
+        }
+
+
+
+
+
+
+
+
+
+        /* *********************** apostas recentes começa aqui  ********************** */
+
+        .main-dashboards {
+            /*background: blue;*/
+            padding-top: 0;
+            padding-right: 0px;
+
+
+
+
+        }
+
+        /* dashboards-conteudo mecho no container todo e dashboards-conteudo-lista mecho nas listas*/
+
+        .bilhetes-recentes-container {
+            background: none;
+
+
+        }
+
+        .main-bilhetes-lista {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+
+            /* Deixa desponsivo*/
+            gap: var(--spacing-gutter-large);
+            padding: 30px;
+
+
+        }
+
+
+        .bilhetes-recentes {
+            background: none;
+            max-width: 100%;
+            margin-left: 8px;
+
+        }
+
+
+        .bilhetes-recentes table {
+            background: none;
+            display: contents;
+
+
+
+
+
+        }
+
+        .bilhetes-recentes table th,
+        table td {
+            padding: 12px;
+            /*border: 1px solid #ffffff;*/
+            margin: 0;
+
+
+
+
+        }
+
+        .caixa {
+            background: none;
+        }
+
+        .botoes {
+            /*background: #25262c;*/
+            margin: 20px;
+            padding: 25px;
+            display: flex;
+            text-align: center;
+
+        }
+
+        .botoes span {
+            background: none;
+            color: whitesmoke;
+            padding-right: 35px;
+
+        }
+
+        .botao-jogo {
+            color: var(--color-warning-light);
+        }
+    </style>
+</head>

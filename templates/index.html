@@ -1,0 +1,273 @@
+{% include 'pagina_inicial/partes/head.html' %}
+
+
+
+<head>
+
+</head>
+
+<body>
+
+    {% include 'pagina_inicial/partes/header.html' %}
+    <div class="botao-registrar-bilhete-top "><a href="{% url 'registrar_bilhete' %}"><i
+                class="fas fa-solid fa-plus botao-registrar-bilhete-top-icone"></i>Bilhete</a>
+
+        <a href="#"><i class="fas fa-solid fa-pen botao-registrar-bilhete-top-icone"></i>Movimentos</a>
+        <a href="#"><i class="fas fa-solid fa-wallet botao-registrar-bilhete-top-icone"></i>Banca</a>
+    </div>
+    {% include 'pagina_inicial/partes/search.html' %}
+
+
+    <main class="main-dashboards-container">
+        <div class="main-dashboards main-dashboards-lista container">
+
+            <div class="banca banca-lista-itens">
+                <div class="banca-cover">
+                    <div class="banca-resultado">
+                        <div class="banca-meta banca">
+                            <h3 class="banca-meta-titulo"><i class="fas fa-solid fa-landmark"></i>Sua Banca
+                            </h3>
+                            <div class="banca-meta-valor">{{ todas_bancas }}</div>
+                        </div>
+                    </div>
+                    <div class="botoes-baixo1">Lucro mensal<a href="google.com">R$ 1.568,58</a></div>
+                    <div class="botoes-baixo2">Lucro por dia<a href="google.com">R$ 35,25</a></div>
+
+                </div>
+            </div>
+
+
+
+
+
+            <div class="indicadores indicadores-lista-itens">
+                <div class="indicadores-cover">
+                    <div class="indicadores-greenered">
+
+                        <div class="indicadores-meta-container">
+                            <div>
+
+                                <h2 class="indicadores-meta-container-titulo">
+                                    Resultados
+                                </h2>
+                                <p>Escanteios - 52%</p>
+                                <p>Gols - 10%</p>
+                                <p>Pré-jogo - 6%</p>
+
+                            </div>
+                            <div class="indicadores-meta indicadores-green">
+                                <h3 class="indicadores-meta-green">Green</h3>
+                                <div class="indicadores-meta-green-numero">{{ bilhetes_green }}</div>
+                            </div>
+
+                            <div class="x">x</div>
+                            <div class="indicadores-meta indicadores-red">
+                                <h3 class="indicadores-meta-red">Red</h3>
+                                <div class="indicadores-meta-red-numero">{{ bilhetes_red }}</div>
+                            </div>
+
+                        </div>
+                        <div class="botoes-baixo1">R$ 1.552,32<a href="google.com">ver mais</a></div>
+                        <div class="botoes-baixo2">Ganhou ontem<a href="google.com">ver mais</a></div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="objetivos objetivos-lista-itens">
+                <div class="objetivos-cover">
+                    <div class="objetivos-greenered">
+
+                        <div class="objetivos-meta-container">
+                            <div class="objetivos-meta indicadores-green">
+                                <h3 class="objetivos-meta-titulo">
+                                    <i class="objetivos-meta-titulo-icone fas fa-dollar-sign"></i>Meta diária
+                                </h3>
+                                <table>
+                                    <thead>
+                                        <td class="objetivos-meta-tabela1-metawin">Meta Win dia</td>
+                                        <td></td>
+                                        <td class="objetivos-meta-tabela1-metawin">Atingir banca</td>
+                                    </thead>
+                                    <tbody>
+                                        <th class="objetivos-meta-tabela1-numero">R$ 350</th>
+                                        <th class="objetivos-meta-tabelas-porcentagem">5%</th>
+                                        <th class="objetivos-meta-tabela1-numero">R$ 350</th>
+
+                                    </tbody>
+
+
+
+                                    <thead>
+                                        <td class="objetivos-meta-tabela1-metawin">Stop loss</td>
+                                        <td></td>
+                                        <td class="objetivos-meta-tabela1-metawin">Limite de perca</td>
+                                    </thead>
+
+                                    <tbody>
+                                        <th class="objetivos-meta-tabela-loss-numero">R$ 550</th>
+                                        <th class="objetivos-meta-tabelas-porcentagemred">10%</th>
+                                        <th class="objetivos-meta-tabela-loss-numero">R$ 350</th>
+                                    </tbody>
+                                </table>
+
+
+                            </div>
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class=" banca banca-lista-itens">
+                <div class="banca-cover">
+                    <div class="banca-resultado">
+                        <div class="banca-meta banca">
+                            <h3 class="banca-meta-titulo"><i class="fas fa-solid fa-trophy"></i>Meta
+                                Mensal</h3>
+                            <div class="botao-edita-meta"><a href="google.com"><i class="fas fa-solid fa-pen"></i>editar
+                                    meta</a></div>
+
+                            <div class="banca-meta-valor">R$ 200,00</div>
+                        </div>
+                    </div>
+                    <div class="range-meta">
+                        <p>
+                            <label for="range"></label>
+                            <input type="range" id="range" name="range" min="0" max="10" step="2">
+
+                        </p>
+                        <div class="range-meta-porcentagem"><b>52,68%</b> da meta atingida</div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <main>
+        <div class="bilhetes-recentes-container">
+
+
+
+
+            <div class="bilhetes-recentes">
+                <div>
+                    <div class="botoes">
+                        <h1></h1>
+
+                        <a href="#">
+                            <span>Registrar Bilhete</span>
+
+                            <span>
+                                <i class="fas fa-user-plus"></i>
+                            </span>
+                        </a>
+
+                        <a href="#">
+                            <span>Registrar Banca</span>
+
+                            <span>
+                                <i class="fas fa-user-plus"></i>
+                            </span>
+                        </a>
+                        <a href="#">
+                            <span>informacoes banca</span>
+
+                            <span>
+                                <i class="fas fa-user-plus"></i>
+                                </spanclass=>
+                        </a>
+                    </div>
+                    <h2>Apostas recentes</h2>
+                </div>
+
+                <div>
+                    <div>
+                        <table class="bilhetes-recentes">
+                            <thead>
+                                <th>Partida</th>
+
+                                <th>valor aposta</th>
+
+                                <th>Resultado</th>
+
+
+
+                                <th>% do lucro</th>
+                            </thead>
+
+                            <tbody>
+                                {% for bilhete in todos_bilhetes %}
+                                <tr>
+                                    <td><a class="botao-jogo"
+                                            href="{% url 'informacoes_bilhete' id=bilhete.id %}">{{ bilhete.get_jogo }}</a>
+                                    </td>
+                                    <td>{{ bilhete.get_valor_aposta }}</td>
+
+                                    <td>{{ bilhete.valor_ganho }}</td>
+
+
+
+                                    <td>
+                                        <a href="{% url 'informacoes_bilhete' id=bilhete.id %}">
+                                            {{ bilhete.porcentagem }}
+                                        </a>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+
+
+    </main>
+
+    <footer class="rodape-container">
+
+        <h3 class="rodape-cotainer-link"><i class="rodape-cotainer-icones fas fa-solid fa-landmark"></i></h3>
+        <a href="google.com">Sua Banca</a>
+
+
+        <hr>
+        <div class="rodape-cotainer-link"><i class="rodape-cotainer-icones fas fa-solid fa-landmark"></i></div>
+        <div><a href="google.com">Tips</a></div>
+        <hr>
+        <h3 class="rodape-cotainer-link"><i class="rodape-cotainer-icones fas fa-solid fa-landmark"></i></h3>
+        <a href="google.com">Ao vivo</a>
+        <hr>
+        <h3 class="rodape-cotainer-link"><i class="rodape-cotainer-icones fas fa-solid fa-landmark"></i></h3>
+        <a href="google.com">apostas</a>
+        <hr>
+        <h3 class="rodape-cotainer-link"><i class="rodape-cotainer-icones fas fa-solid fa-landmark"></i></h3>
+        <a href="google.com">Pesquisar</a>
+
+    </footer>
+
+</body>
+
+</html>

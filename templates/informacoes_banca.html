@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <table class="bilhetes-recentes">
+                <thead>
+                    <th>Banca</th>
+
+                    <th>valor Banca</th>
+
+
+                </thead>
+
+                <tbody>
+                    {% for banca in todas_bancas %}
+                    <tr>
+                        <td><a class="botao-jogo"
+                                href="{% url 'informacoes_bilhete' id=bilhete.id %}">{{ bilhete.get_jogo }}</a>
+                        </td>
+                        <td>{{ todas_bancas }}</td>
+
+                        <td>{{ bancas_saldo }}</td>
+
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
