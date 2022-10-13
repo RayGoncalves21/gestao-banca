@@ -1,4 +1,6 @@
+from bancas.models import Banca
 from bilhetes.models import Bilhete
+from django.db.models import Sum
 from django.shortcuts import render
 
 

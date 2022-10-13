@@ -1,4 +1,4 @@
-from unicodedata import name
+from unicodedata import decimal, name
 
 from bancas.models import Banca
 from django.db import models
@@ -36,8 +36,10 @@ class Bilhete(models.Model):
 
     )
 
-    valor_aposta = models.IntegerField(
+    valor_aposta = models.DecimalField(
         verbose_name='Valor apostado R$',
+        max_digits=100,
+        decimal_places=2,
     )
 
     cotacao = models.FloatField(
@@ -64,12 +66,20 @@ class Bilhete(models.Model):
 
         return jogo_formatado
 
-    def get_valor_aposta(self):
+    def valor_ganho_decimal(self):
         valor = self.valor_aposta
+        cotacao = self.cotacao
 
-        valor_formatado = f'R$ {valor}'
+        ganho = valor * cotacao
 
-        return valor_formatado
+        return ganho
+
+    def lucro_liquido(self):
+        aposta = self.valor_aposta
+        ganho = self.valor_ganho_decimal
+        lucro_liquido = ganho - aposta
+
+        return lucro_liquido
 
     def valor_ganho(self):
         valor = self.valor_aposta

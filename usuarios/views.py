@@ -2,6 +2,7 @@
 from bancas.models import Banca
 from bilhetes.models import Bilhete
 from django.contrib import messages
+from django.db.models import Sum
 from django.http import HttpResponseNotAllowed
 from django.shortcuts import HttpResponse, get_object_or_404, redirect, render
 from django.utils import timezone
@@ -20,7 +21,9 @@ def index(request):
         status="RED"
     )
 
-    todas_bancas = Banca.saldo
+    soma = Banca.objects.aggregate(Sum('saldo'))
+    soma_total = str(soma['saldo__sum'])
+    formatado = f'R$ {soma_total}'
 
     context = {
         "nome_pagina": "Inicio",
@@ -28,8 +31,10 @@ def index(request):
         "bilhetes_aguardando": bilhetes_aguardando.count(),
         "bilhetes_green": bilhetes_green.count(),
         "bilhetes_red": bilhetes_red.count(),
-        "todas_bancas": todas_bancas
 
+        "soma": soma,
+        "soma_total": soma_total,
+        "formatado": formatado,
 
     }
     return render(request, "index.html", context)

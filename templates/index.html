@@ -13,7 +13,7 @@
                 class="fas fa-solid fa-plus botao-registrar-bilhete-top-icone"></i>Bilhete</a>
 
         <a href="#"><i class="fas fa-solid fa-pen botao-registrar-bilhete-top-icone"></i>Movimentos</a>
-        <a href="#"><i class="fas fa-solid fa-wallet botao-registrar-bilhete-top-icone"></i>Banca</a>
+        <a href=#><i class="fas fa-solid fa-wallet botao-registrar-bilhete-top-icone"></i>Banca</a>
     </div>
     {% include 'pagina_inicial/partes/search.html' %}
 
@@ -27,8 +27,12 @@
                         <div class="banca-meta banca">
                             <h3 class="banca-meta-titulo"><i class="fas fa-solid fa-landmark"></i>Sua Banca
                             </h3>
-                            <div class="banca-meta-valor">{{ todas_bancas }}</div>
+
+
+                            <div class="banca-meta-valor">{{ formatado }}</div>
                         </div>
+
+
                     </div>
                     <div class="botoes-baixo1">Lucro mensal<a href="google.com">R$ 1.568,58</a></div>
                     <div class="botoes-baixo2">Lucro por dia<a href="google.com">R$ 35,25</a></div>
